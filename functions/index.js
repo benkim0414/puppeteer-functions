@@ -3,6 +3,10 @@ const puppeteer = require('puppeteer');
 const functions = require('firebase-functions');
 
 const app = express();
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 app.all('*', async (req, res, next) => {
   res.locals.browser = await puppeteer.launch({args: ['--no-sandbox']});
