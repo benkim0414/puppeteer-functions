@@ -1,0 +1,10 @@
+{
+  "name": "puppeteer-functions",
+  "description": "Puppeteer for Firebase Cloud Functions",
+  "dependencies": {
+    "express": "^4.16.3",
+    "firebase-admin": "^6.0.0",
+    "firebase-functions": "^2.0.5",
+    "puppeteer": "^1.8.0"
+  }
+}
