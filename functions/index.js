@@ -44,7 +44,7 @@ app.get('/screenshot', async (req, res) => {
 
   try {
     const page = await browser.newPage();
-    await page.goto(url);
+    await page.goto(url, {waitUntil: 'networkidle2'});
 
     const opts = {
       fullPage,
